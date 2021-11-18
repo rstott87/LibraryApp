@@ -1,0 +1,24 @@
+
+get displaylibary func to display library
+
+
+-------
+-User will submit book info
+-book ill get added to library array
+-books in array will be displayed
+
+
+
+
+addNewBook()
+    gets book title from user
+    gets book author from user
+    gets page numbers from user
+    gets read status from user 
+
+when button "New Book" is clicked
+    -addNewBook() is run
+    -book gets added to library array
+
+
+

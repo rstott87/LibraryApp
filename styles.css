@@ -1,0 +1,5 @@
+#mainForm {
+    display: none;
+    border: 2px solid red;
+    width: 30%;
+}
