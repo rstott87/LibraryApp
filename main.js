@@ -18,31 +18,37 @@ const submitButton = document.querySelector('#submit');
 submitButton.addEventListener('click', addBookToLibrary);
 
 const btn = document.querySelector('#newBookButton');
-btn.addEventListener('click', newBookAdd);
+btn.addEventListener('click', addBookToLibrary);
 
 const btn2 = document.querySelector('#displayBookButton');
 btn2.addEventListener('click', displayLibrary);
 
 //function that pops up new from field
-function newBookAdd () {
+/*function newBookAdd () {
 mainForm.display = 'block';
-};
+};*/
 
 //function that submits what's in the form then adds it to the new book array
 function addBookToLibrary() {
 
-    let title = document.getElementById("book").value;
+    let title = prompt ("What was the title of the book?");
+    let author = prompt ("Who was the author?");
+    let numPages = prompt ("How many pages was it?");
+    let read = prompt ("Did you read it?");
+
+    /*let title = document.getElementById("book").value;
     let author = document.getElementById("author").value;
     let numPages = document.getElementById("numPages").value;
-    let read = document.getElementById("read").value;
+    let read = document.getElementById("read").value;*/
+
 
     console.log (title);
     console.log (author);
     console.log (numPages);
     console.log (read);
 
-    /*var newBook = new Book(title, author, numPages, read);
-    myLibrary.push(newBook);*/
+    var newBook = new Book(title, author, numPages, read);
+    myLibrary.push(newBook);
 
 }; 
 
