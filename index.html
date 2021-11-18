@@ -8,22 +8,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form id= "mainForm">
-        <label for="title:">Title:</label><br>
-        <input type="text" id="book" name="bookTitle"><br>
-        <label for="author:">Author: </label><br>
-        <input type="text" id="author" name="bookAuthor"><br>
-        <label for="numPages">Pages:</label><br>
-        <input type="text" id="numPages" name="numberOfPages"><br>
-        <label for="Read: ">Pages:</label><br>
-        <input type="text" id="read" name="readStatus"><br>
-        <button id = "submit" value="Submit"> Submit </button>
-      </form>
-      
-      <button id = "newBookButton">NEW BOOK!</button>
-      <button id = "displayBookButton">Display Library!</button>
-
-      <p id="demo"></p>
+    <main>
+        <form id= "mainForm">
+            <label for="title:">Title:</label><br>
+            <input type="text" id="book" name="bookTitle"><br>
+            <label for="author:">Author: </label><br>
+            <input type="text" id="author" name="bookAuthor"><br>
+            <label for="numPages">Pages:</label><br>
+            <input type="text" id="numPages" name="numberOfPages"><br>
+            <label for="Read: ">Pages:</label><br>
+            <input type="text" id="read" name="readStatus"><br>
+            <button id = "submit" value="Submit"> Submit </button>
+        </form>
+        
+        <div>
+            <div id="bookContainer"></div>
+        </div>
+        <div id = "buttonContainer">
+            <button id = "newBookButton" class="button-18" role="button"> New Book </button> 
+            <button id = "clearButton" class="button-18" role="button"> Clear All </button>
+        </div>    
+    </main>
 
 </body>
 <script src="./main.js">

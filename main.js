@@ -6,7 +6,10 @@ function Book(title, author, numPages, read) {
     this.numPages = numPages
     this.read = read
     this.info = function () {
-        return `Title: ${title} AUTHOR: ${author} PAGES: ${numPages} READ: ${read} `;
+        return `TITLE:  ${title} 
+        AUTHOR:  ${author} 
+        PAGES:  ${numPages} 
+        READ:  ${read} `;
     };
 };
 
@@ -14,14 +17,17 @@ const mainForm = document.querySelector('#mainForm').style;
 
 //selectors and event listeners. functions are defined below this section
 
-const submitButton = document.querySelector('#submit');
-submitButton.addEventListener('click', addBookToLibrary);
+/*const submitButton = document.querySelector('#submit');
+submitButton.addEventListener('click', addBookToLibrary);*/
 
-const btn = document.querySelector('#newBookButton');
+const btn = document.getElementById('newBookButton');
 btn.addEventListener('click', addBookToLibrary);
 
-const btn2 = document.querySelector('#displayBookButton');
-btn2.addEventListener('click', displayLibrary);
+const clearButton =  document.getElementById('clearButton');
+clearButton.addEventListener('click', clearLibrary);
+
+/*const btn2 = document.querySelector('#displayBookButton');
+btn2.addEventListener('click', displayLibrary);*/
 
 //function that pops up new from field
 /*function newBookAdd () {
@@ -50,8 +56,21 @@ function addBookToLibrary() {
     var newBook = new Book(title, author, numPages, read);
     myLibrary.push(newBook);
 
-}; 
-
+    let paragraph = document.getElementById("bookContainer");
+    paragraph.innerHTML = ' ';
+    JSON.stringify(myLibrary.forEach((element) => {    
+            let newDiv = document.createElement('div');
+            paragraph.appendChild(newDiv); 
+            newDiv.innerHTML= element.info()
+            })
+        )}; 
+    
+function clearLibrary () {  
+    myLibrary = []; 
+    let paragraph = document.getElementById("bookContainer");
+    paragraph.innerHTML = ' ';
+};
+        
 
 /* var newBook1 = new Book("How To Change Your Mind", "M. Pollan", 312, "yes");
 var newBook2 = new Book("Mind For Numbers", "Susan", 555, "no");
@@ -61,17 +80,6 @@ myLibrary.push(newBook2); */
 
 
 
-
-//when display lib button is clicked, this should display the info in the array. 
-let paragraph = document.getElementById("demo");
-function displayLibrary() {
-    JSON.stringify(myLibrary.forEach((element) => {
-        let newDiv = document.createElement('div');
-        paragraph.appendChild(newDiv); 
-        newDiv.innerHTML= element.info()
-    })
-    )};
-    
 
 
 
