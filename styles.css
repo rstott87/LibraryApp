@@ -10,6 +10,7 @@
     padding-bottom: 50px;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 #bookContainer > div {
@@ -31,7 +32,7 @@
 
 
 /* CSS */
-.button-18 {
+.button-18, #bookContainer > div > div {
   align-items: center;
   background-color: #0A66C2;
   border: 0;
