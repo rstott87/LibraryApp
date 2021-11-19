@@ -15,7 +15,7 @@ function Book(title, author, numPages, read) {
     };
 };
 
-const mainForm = document.querySelector('#mainForm').style; 
+
 
 //selectors and event listeners. functions are defined below this section
 
@@ -68,12 +68,14 @@ function innerFunction() {
         })
     )};
 
+/* Handler for Clear Button. Clears display*/
 function clearLibrary () {  
     myLibrary = []; 
     let paragraph = document.getElementById("bookContainer");
     paragraph.innerHTML = ' ';
     };
 
+/* function used to remove the card as a div and element*/   
 function deleteBook (e) {
     const indexPosition = e.target.getAttribute('data-key');
     console.log (indexPosition);
